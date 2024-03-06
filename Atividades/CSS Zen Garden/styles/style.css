@@ -50,3 +50,51 @@ p {
 abbr {
   font-variant: small-caps;
 }
+
+.page-wrapper {
+  width: 80%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+#zen-intro {
+  height: 550px;
+}
+
+#design-archives {
+  display: none;
+}
+
+header {
+  background-color: var(--destaque);
+}
+
+header > h1,
+header > h2 {
+  display: inline-block;
+  color: var(--text);
+}
+
+header > h1 {
+  margin: 0 1em;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin: 1em;
+  text-align: center;
+}
+
+.main footer {
+  margin: 4%;
+}
+
+.main footer a {
+  border: solid 2px var(--destaque);
+  padding: 0.5em;
+  display: inline-block;
+}
