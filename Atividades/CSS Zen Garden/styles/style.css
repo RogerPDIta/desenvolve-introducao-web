@@ -189,3 +189,43 @@ a:visited {
 #design-selection li:nth-last-of-type() {
   border-bottom: solid 1px var(--destaque);
 }
+
+@media (max-width: 768px) {
+  #design-selection {
+    position: static;
+    width: 100%;
+  }
+
+  .explanation {
+    border-right: none;
+    width: 100%;
+  }
+
+  #zen-intro {
+    height: auto;
+  }
+
+  #zen-participation {
+    flex-direction: column;
+  }
+
+  p {
+    text-indent: 0;
+  }
+}
+
+@media print {
+  html {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--text);
+    color: var(--background);
+  }
+
+  header {
+    background-color: var(--text);
+  }
+  header > h1,
+  header > h2 {
+    color: var(--background);
+  }
+}
