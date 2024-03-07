@@ -98,3 +98,23 @@ aside ul li {
   padding: 0.5em;
   display: inline-block;
 }
+
+.page-wrapper {
+  position: relative;
+}
+
+.explanation {
+  width: 60%;
+
+  margin-right: 35%;
+
+  border-right: solid 1px var(--destaque); /*Estou utilizando as minhas cores para manter o padrão do projeto*/
+  padding-right: 2%;
+}
+
+#design-selection {
+  position: absolute;
+  top: 560px;
+  right: 0;
+  padding: 0 2%;
+}
