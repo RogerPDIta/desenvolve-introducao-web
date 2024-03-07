@@ -118,3 +118,47 @@ aside ul li {
   right: 0;
   padding: 0 2%;
 }
+
+/* está repetindo os blocos acima, não irei alterar para não prejudicas as correções anteriores*/
+.main footer {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.main footer a {
+  font-size: 1.2rem;
+}
+
+#zen-benefits {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  border-top: solid 1px var(--destaque);
+  border-bottom: solid 1px var(--destaque);
+}
+
+#zen-benefits p {
+  width: 70%;
+}
+
+#zen-benefits h3 {
+  width: 30%;
+}
+
+#zen-participation {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px var(--destaque);
+}
+
+#zen-participation p,
+#zen-participation h3 {
+  flex-basis: 50%;
+}
+
+#zen-participation h3 {
+  align-self: center;
+}
