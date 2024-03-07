@@ -114,7 +114,8 @@ aside ul li {
 
 #design-selection {
   position: absolute;
-  top: 560px;
+  width: 40%;
+  top: 520px;
   right: 0;
   padding: 0 2%;
 }
@@ -161,4 +162,30 @@ aside ul li {
 
 #zen-participation h3 {
   align-self: center;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:hover {
+  filter: brightness(2);
+}
+
+a:visited {
+  font-weight: lighter;
+}
+
+.main p:first-of-type::first-letter {
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  float: left;
+}
+
+#design-selection li {
+  border-top: solid 1px var(--destaque);
+}
+
+#design-selection li:nth-last-of-type() {
+  border-bottom: solid 1px var(--destaque);
 }
