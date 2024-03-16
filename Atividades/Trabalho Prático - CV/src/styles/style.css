@@ -1,0 +1,368 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'inter', sans-serif;
+}
+
+.title__one {
+  font-size: var(--title-one);
+  font-weight: bold;
+}
+
+.title__two {
+  font-size: var(--title-two);
+  font-weight: bold;
+}
+
+.title__three {
+  font-size: var(--title-three);
+  font-weight: bold;
+}
+
+.text__size {
+  font-size: var(--text);
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('https://miro.medium.com/v2/resize:fit:1358/1*F7v7mAmssKFRAMMQS8WmXA.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  z-index: 2;
+}
+
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-transparent);
+}
+
+.header__title {
+  text-align: center;
+  margin-top: 1rem;
+
+  z-index: 100;
+}
+
+.header__contact--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+}
+
+.contact__subtitle--one {
+  color: var(--color-highlight);
+
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+
+  animation: typing 4s steps(50, end) 1s infinite;
+}
+
+.contact__subtitle--one::after {
+  content: '_';
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.5s step-end infinite;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.contact__container--profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact__container--profile > p > a {
+  color: var(--color-highlight);
+}
+
+.contact__container--profile > a {
+  padding: 16px;
+  background-color: var(--color-highlight);
+
+  color: var(--color-dark);
+  font-weight: bold;
+
+  border-radius: 20px;
+  width: max-content;
+
+  transition: all 0.5s;
+}
+
+.contact__container--profile > a:hover {
+  box-shadow: inset 0 0 10px 0 var(--color-highlight),
+    0 0 20px 0 var(--color-highlight), 0 0 30px 0 var(--color-highlight);
+}
+
+.contact__profile--image {
+  height: 80%;
+  border-radius: 50%;
+}
+
+.main__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  position: relative;
+
+  margin-top: 105vh;
+}
+
+#education,
+#certification,
+#experience,
+#skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  height: 100vh;
+
+  scroll-margin-top: 5px;
+}
+
+.education__container--main,
+.certification__list--container,
+.experience__container--main,
+.skills__container--list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: absolute;
+  top: 100px;
+  left: 0;
+
+  width: 100%;
+  padding: 2rem;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s cubic-bezier(0.64, 0.02, 0.41, 1.25);
+
+  transition: all 0.5s;
+
+  border: solid 3px var(--color-highlight);
+  border-radius: 20px;
+}
+
+.education__container--title,
+.certification__container--title,
+.experience__container--title,
+.skills__container--title {
+  padding: 8px;
+  text-align: center;
+}
+
+.education__container--title:hover,
+.certification__container--title:hover,
+.experience__container--title:hover,
+.skills__container--title:hover {
+  transition: all 0.5s;
+  border-radius: 20px;
+  transform: scale(1.2);
+
+  color: var(--color-highlight);
+
+  border: solid 3px var(--color-highlight);
+
+  cursor: progress;
+}
+
+.education__container--title:hover::before,
+.certification__container--title:hover::before,
+.experience__container--title:hover::before,
+.skills__container--title:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: var(--color-highlight) transparent transparent transparent;
+}
+
+.education__container--title:hover ~ .education__container--main,
+.certification__container--title:hover ~ .certification__list--container,
+.experience__container--title:hover ~ .experience__container--main,
+.skills__container--title:hover ~ .skills__container--list {
+  transform: scaleY(1);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: var(--color-dark);
+  width: 100%;
+  height: 100px;
+}
+
+.footer__list--item > a {
+  color: var(--color-white);
+
+  transition: all 0.5s;
+}
+
+.footer__container--list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 50%;
+
+  list-style: none;
+}
+
+.footer__list--item > a {
+  font-size: 2rem;
+
+  border-radius: 50%;
+}
+
+.footer__list--item > a:hover {
+  color: var(--color-highlight);
+
+  box-shadow: inset 0 0 10px 0 var(--color-highlight),
+    0 0 20px 0 var(--color-highlight), 0 0 30px 0 var(--color-highlight);
+}
+
+.link__to--top {
+  color: var(--color-white);
+
+  border: solid 1px var(--color-white);
+  border-radius: 20px;
+  padding: 16px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  height: 30px;
+  width: 30px;
+  text-align: center;
+
+  z-index: 1;
+}
+
+.link__to--top:hover {
+  color: var(--color-highlight);
+  border: solid 1px var(--color-highlight);
+
+  box-shadow: inset 0 0 10px 0 var(--color-highlight),
+    0 0 20px 0 var(--color-highlight), 0 0 30px 0 var(--color-highlight);
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+
+  #header {
+    height: 100dvh;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .header__contact--container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    width: 90%;
+  }
+
+  .contact__profile--image {
+    max-width: 200px;
+    height: 200px;
+  }
+
+  .main__container {
+    margin-top: 110dvh;
+
+    padding: 3rem;
+
+    overflow-x: auto;
+    width: auto;
+  }
+
+  #education,
+  #certification,
+  #experience,
+  #skills {
+    align-items: center;
+
+    height: auto;
+  }
+
+  .education__container--title:hover::before,
+  .certification__container--title:hover::before,
+  .experience__container--title:hover::before,
+  .skills__container--title:hover::before {
+    bottom: -10px;
+    border-width: 8px 8px 0 8px;
+  }
+
+  .education__container--main,
+  .certification__list--container,
+  .experience__container--main,
+  .skills__container--list {
+    position: sticky;
+  }
+
+  .link__to--top {
+    height: 15px;
+    width: 15px;
+  }
+}

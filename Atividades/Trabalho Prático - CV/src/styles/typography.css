@@ -1,0 +1,15 @@
+:root {
+  --color-highlight: #01eff5;
+  --color-brand: #0455bf;
+  --color-brand-two: #054ba6;
+  --color-black: #000;
+  --color-dark: #012340;
+  --color-dark-two: #011526;
+  --color-transparent: #0009;
+  --color-white: #f5f5f5;
+
+  --title-one: 2rem;
+  --title-two: 1.5rem;
+  --title--three: 1.25rem;
+  --text: 1rem;
+}
