@@ -146,14 +146,29 @@ h3 {
   border-radius: 50%;
 }
 
+#description {
+  text-align: center;
+
+  margin-top: 115dvh;
+  height: 100px;
+
+  scroll-margin-top: 10px;
+
+  color: var(--color-highlight);
+}
+
 .main__container {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 
   position: relative;
+}
 
-  margin-top: 105vh;
+.main__container > h2 {
+  position: absolute;
+  text-align: center;
+  top: 10%;
 }
 
 #education,
@@ -165,8 +180,6 @@ h3 {
   gap: 1rem;
 
   height: 100vh;
-
-  scroll-margin-top: 5px;
 }
 
 .education__container--main,
@@ -331,8 +344,6 @@ h3 {
   }
 
   .main__container {
-    margin-top: 110dvh;
-
     padding: 3rem;
 
     overflow-x: auto;

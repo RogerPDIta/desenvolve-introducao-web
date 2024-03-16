@@ -116,12 +116,12 @@ body {
   font-family: 'Roboto', sans-serif;
   background: var(--color-dark-two);
   background: -webkit-linear-gradient(
-    to bottom,
+    to left,
     var(--color-dark-two),
     var(--color-brand-two)
   );
   background: linear-gradient(
-    to bottom,
+    to left,
     var(--color-dark-two),
     var(--color-brand-two)
   );
