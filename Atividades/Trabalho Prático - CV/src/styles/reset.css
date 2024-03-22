@@ -130,7 +130,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
   height: 5px;
 }
 
@@ -163,6 +163,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 button,
 input,
 select,
@@ -177,8 +178,18 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--color-white);
 }
 
 strong {
   font-weight: bold;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+span {
+  font-style: italic;
 }

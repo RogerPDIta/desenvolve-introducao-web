@@ -71,23 +71,25 @@
       </header>
 
       <div id="description">
-        <h2 class="title__two">
-          Passe o mouse sobre os itens para ver mais informações
+        <h2 class="description__title title__two">
+          Clique em cada item para visualizar as informações
         </h2>
       </div>
 
       <main class="main__container">
         <section id="education" class="education__container">
-          <h2 class="education__container--title title__two">Formação</h2>
+          <a href="#education_activate" class="link__title">
+            <h2 class="education__container--title title__two">Formação</h2></a
+          >
 
-          <div class="education__container--main">
+          <div id="education_activate" class="education__container--main">
             <div class="education__container--div">
               <h3 class="education__div--title title__three">
                 Tecnólogo em Análise e Desenvolvimento de Sistemas
               </h3>
 
               <p class="education__div--paragraph text__size">
-                Pitágoras Unopar - 2022
+                <span>Pitágoras Unopar - 2022</span>
               </p>
             </div>
 
@@ -97,7 +99,7 @@
               </h3>
 
               <p class="education__div--paragraph text__size">
-                Kenzie Academy Brasil - 2023
+                <span>Kenzie Academy Brasil - 2023</span>
               </p>
             </div>
 
@@ -107,18 +109,23 @@
               </h3>
 
               <p class="education__div--paragraph text__size">
-                Projeto Desenvolve - 2025
+                <span>Projeto Desenvolve - 2025</span>
               </p>
             </div>
           </div>
         </section>
 
         <section id="certification" class="certification__container">
-          <h2 class="certification__container--title title__two">
-            Certificados
-          </h2>
+          <a href="#certification_activate">
+            <h2 class="certification__container--title title__two">
+              Certificados
+            </h2></a
+          >
 
-          <ul class="certification__list--container text__size">
+          <ul
+            id="certification_activate"
+            class="certification__list--container text__size"
+          >
             <li class="certification__list--item">
               <strong>MySQL</strong>, 40h - Curso em Vídeo
             </li>
@@ -152,16 +159,18 @@
         </section>
 
         <section id="experience" class="experience__container">
-          <h2 class="experience__container--title title__two">Experiência</h2>
+          <a href="#experience_activate">
+            <h2 class="experience__container--title title__two">Experiência</h2>
+          </a>
 
-          <div class="experience__container--main">
+          <div id="experience_activate" class="experience__container--main">
             <div class="experience__container--div">
               <h3 class="experience__div--title title__three">
                 Freelancer Desenvolvimento Full Stack
               </h3>
 
               <p class="experience__one--paragraph text__size">
-                Pinguintech (06/2023 - 03/2024)
+                <span>Pinguintech (06/2023 - 03/2024)</span>
               </p>
 
               <ul class="experience__list--container text__size">
@@ -191,7 +200,7 @@
               </h3>
 
               <p class="experience__one--paragraph text__size">
-                FVS Solution (09/2023 a 11/2023)
+                <span>FVS Solution (09/2023 a 11/2023)</span>
               </p>
 
               <ul class="experience__list--container text__size">
@@ -226,7 +235,7 @@
               <h3 class="experience__div--title title__three">Monitor</h3>
 
               <p class="experience__one--paragraph text__size">
-                Kenzie Academy Brasil (01/2023 - 07/2023)
+                <span>Kenzie Academy Brasil (01/2023 - 07/2023)</span>
               </p>
 
               <ul class="experience__list--container text__size">
@@ -257,11 +266,11 @@
         </section>
 
         <section id="skills" class="skills__container">
-          <h2 class="skills__container--title title__two">
-            Habilidades Técnicas
-          </h2>
+          <a href="#skills_activate">
+            <h2 class="skills__container--title title__two">Habilidades</h2>
+          </a>
 
-          <ul class="skills__container--list text__size">
+          <ul id="skills_activate" class="skills__container--list text__size">
             <li class="skills__list--item">
               Experiência na construção de projetos utilizando JavaScript ES6,
               ReactJs, TypeScript, NodeJS, Python e controle de versionamento
@@ -336,6 +345,13 @@
           ></a>
         </li>
       </ul>
+
+      <p class="footer__paragraph">
+        &copy; 2024 Roger Magalhães Ferreira.<br />
+        Todos os direitos reservados. <br />
+        Última atualização em:
+        <span>22/03/2024</span>
+      </p>
     </footer>
     <a href="#header" class="link__to--top"> <i class="fas fa-arrow-up"></i></a>
   </body>

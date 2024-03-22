@@ -39,7 +39,7 @@ h3 {
   left: 0;
 
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 
   background-image: url('https://miro.medium.com/v2/resize:fit:1358/1*F7v7mAmssKFRAMMQS8WmXA.png');
   background-size: cover;
@@ -148,11 +148,9 @@ h3 {
 
 #description {
   text-align: center;
+  padding: 2rem;
 
-  margin-top: 115dvh;
-  height: 100px;
-
-  scroll-margin-top: 10px;
+  margin-top: 100dvh;
 
   color: var(--color-highlight);
 }
@@ -163,6 +161,8 @@ h3 {
   gap: 2rem;
 
   position: relative;
+  height: 80dvh;
+  width: 100%;
 }
 
 .main__container > h2 {
@@ -178,56 +178,32 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  height: 100vh;
-}
-
-.education__container--main,
-.certification__list--container,
-.experience__container--main,
-.skills__container--list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  position: absolute;
-  top: 100px;
-  left: 0;
-
-  width: 100%;
-  padding: 2rem;
-
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s cubic-bezier(0.64, 0.02, 0.41, 1.25);
-
-  transition: all 0.5s;
-
-  border: solid 3px var(--color-highlight);
-  border-radius: 20px;
 }
 
 .education__container--title,
 .certification__container--title,
 .experience__container--title,
 .skills__container--title {
-  padding: 8px;
   text-align: center;
+
+  color: var(--color-white);
+
+  background-color: transparent;
+  border: solid 3px transparent;
+  border-radius: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  margin: 0 auto;
 }
 
 .education__container--title:hover,
 .certification__container--title:hover,
 .experience__container--title:hover,
 .skills__container--title:hover {
-  transition: all 0.5s;
-  border-radius: 20px;
-  transform: scale(1.2);
+  transform: scale(1.1);
 
   color: var(--color-highlight);
-
-  border: solid 3px var(--color-highlight);
-
-  cursor: progress;
 }
 
 .education__container--title:hover::before,
@@ -244,11 +220,57 @@ h3 {
   border-color: var(--color-highlight) transparent transparent transparent;
 }
 
-.education__container--title:hover ~ .education__container--main,
-.certification__container--title:hover ~ .certification__list--container,
-.experience__container--title:hover ~ .experience__container--main,
-.skills__container--title:hover ~ .skills__container--list {
+#education_activate,
+#certification_activate,
+#experience_activate,
+#skills_activate {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  position: absolute;
+  top: 100px;
+  left: 0;
+
+  overflow-y: auto;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s cubic-bezier(0.64, 0.02, 0.41, 1.25);
+  transition: all 0.5s;
+
+  border: solid 3px var(--color-highlight);
+  border-radius: 20px;
+
+  width: 100%;
+  height: 375px;
+  max-height: 70dvh;
+  padding: 1rem 0;
+
+  scroll-margin-top: 250px;
+}
+
+#education_activate:target,
+#certification_activate:target,
+#experience_activate:target,
+#skills_activate:target {
   transform: scaleY(1);
+}
+
+#education_activate::-webkit-scrollbar,
+#certification_activate::-webkit-scrollbar,
+#experience_activate::-webkit-scrollbar,
+#skills_activate::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.education__container--div,
+.certification__list--item,
+.experience__container--div,
+.experience__list--item,
+.skills__list--item {
+  margin: 0 1rem;
 }
 
 .experience__list--container {
@@ -261,11 +283,14 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1rem;
 
   background-color: var(--color-dark);
   width: 100%;
-  height: 100px;
+
+  padding: 8px 0;
+  text-align: center;
 }
 
 .footer__list--item > a {
@@ -295,6 +320,10 @@ h3 {
 
   box-shadow: inset 0 0 10px 0 var(--color-highlight),
     0 0 20px 0 var(--color-highlight), 0 0 30px 0 var(--color-highlight);
+}
+
+.footer__paragraph {
+  width: 50%;
 }
 
 .link__to--top {
@@ -327,14 +356,12 @@ h3 {
 
 @media (max-width: 900px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   #header {
     height: 100dvh;
     width: 100%;
-    gap: 2rem;
-    padding: 2rem 0;
   }
 
   .header__contact--container {
@@ -345,39 +372,32 @@ h3 {
   }
 
   .contact__profile--image {
-    max-width: 200px;
-    height: 200px;
+    max-width: 150px;
+    height: 150px;
   }
 
   .main__container {
-    padding: 3rem;
+    padding: 1.5rem 0;
 
     overflow-x: auto;
+
     width: auto;
+    height: 500px;
   }
 
   #education,
   #certification,
   #experience,
   #skills {
-    align-items: center;
-
-    height: auto;
+    align-items: normal;
   }
 
-  .education__container--title:hover::before,
-  .certification__container--title:hover::before,
-  .experience__container--title:hover::before,
-  .skills__container--title:hover::before {
-    bottom: -10px;
-    border-width: 8px 8px 0 8px;
-  }
-
-  .education__container--main,
-  .certification__list--container,
-  .experience__container--main,
-  .skills__container--list {
+  #education_activate,
+  #certification_activate,
+  #experience_activate,
+  #skills_activate {
     position: sticky;
+    width: 200px;
   }
 
   .link__to--top {
